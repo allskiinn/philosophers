@@ -6,7 +6,7 @@
 /*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 17:48:55 by aliberal          #+#    #+#             */
-/*   Updated: 2025/12/17 01:06:20 by aliberal         ###   ########.fr       */
+/*   Updated: 2025/12/17 12:10:13 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,5 @@ int	ft_usleep(long int time)
 	start = get_time();
 	while ((get_time() - start) < time)
 		usleep(150);
-	return (1);
+	return (FAILURE);
 }

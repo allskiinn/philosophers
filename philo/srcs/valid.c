@@ -6,7 +6,7 @@
 /*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 17:30:55 by aliberal          #+#    #+#             */
-/*   Updated: 2025/12/17 01:09:19 by aliberal         ###   ########.fr       */
+/*   Updated: 2025/12/17 12:13:16 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	valid_args(int n_args, char **args)
 {
-	int c;
+	int	c;
 
 	if (n_args != 5 && n_args != 6)
 	{
@@ -39,7 +39,7 @@ static	int	valid_died(t_p *philo)
 	philo->die = 1;
 	pthread_mutex_unlock(philo->fork_left);
 	pthread_mutex_unlock(philo->fork_right);
-	return (1);
+	return (FAILURE);
 }
 
 static	int	valid_death(t_p *p)
@@ -54,7 +54,7 @@ static	int	valid_death(t_p *p)
 		return (valid_died(p));
 	}
 	pthread_mutex_unlock(p->data->block);
-	return (0);
+	return (SUCCESS);
 }
 
 static	int	valid_meals(t_p p, int last)
@@ -63,7 +63,7 @@ static	int	valid_meals(t_p p, int last)
 		&& last == p.data->philos - 1
 		&& p.meals == p.data->meals_philo)
 		return (ft_usleep(300));
-	return (0);
+	return (SUCCESS);
 }
 
 void	valid_thread(t_p *p, t_data *d)

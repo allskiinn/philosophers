@@ -6,7 +6,7 @@
 /*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 17:49:55 by aliberal          #+#    #+#             */
-/*   Updated: 2025/12/16 22:11:26 by aliberal         ###   ########.fr       */
+/*   Updated: 2025/12/17 12:10:02 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,11 +97,11 @@ int	start_philo(t_data *d)
 	if (!p)
 	{
 		failed("Error in struct philo", d, p, 1);
-		return (1);
+		return (FAILURE);
 	}
 	start_info_philo(p, d);
 	start_threads_philo(p, d);
 	valid_thread(p, d);
 	finish_thread(p, d);
-	return (0);
+	return (SUCCESS);
 }
