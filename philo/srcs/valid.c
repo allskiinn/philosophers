@@ -6,7 +6,7 @@
 /*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 17:30:55 by aliberal          #+#    #+#             */
-/*   Updated: 2025/12/16 20:21:55 by aliberal         ###   ########.fr       */
+/*   Updated: 2025/12/17 01:09:19 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	valid_args(int n_args, char **args)
 
 static	int	valid_died(t_p *philo)
 {
-	show_action(philo, DIE);
+	show_action(philo, "Died");
 	philo->data->finish = 1;
 	philo->die = 1;
 	pthread_mutex_unlock(philo->fork_left);
@@ -48,7 +48,7 @@ static	int	valid_death(t_p *p)
 
 	pthread_mutex_lock(p->data->block);
 	now = get_time() - p->last_meal;
-	if (now >= p->data->time_die)
+	if (now >= p->data->time_to_die)
 	{
 		pthread_mutex_unlock(p->data->block);
 		return (valid_died(p));
@@ -85,6 +85,6 @@ void	valid_thread(t_p *p, t_data *d)
 		ft_usleep(5 * d->philos);
 		printf("\n\n-----------------------\n\n");
 		printf("-> Everyone ate %d time\n", d->meals_philo);
-		printf("\n\n-----------------------");
+		printf("\n-----------------------");
 	}
 }

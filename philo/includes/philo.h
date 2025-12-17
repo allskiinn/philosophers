@@ -6,7 +6,7 @@
 /*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:15:44 by aliberal          #+#    #+#             */
-/*   Updated: 2025/12/16 20:24:16 by aliberal         ###   ########.fr       */
+/*   Updated: 2025/12/16 22:02:28 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@
 struct s_data
 {
 	int				philos;
-	int				time_die;
-	int				time_eat;
-	int				time_sleep;
+	int				time_to_die;
+	int				time_to_eat;
+	int				time_to_sleep;
 	int				meals_philo;
 
 	int				start;
@@ -87,9 +87,6 @@ void		*actions(void *arg);
 /* utils */
 int			ft_atoi(const char *str);
 int			ft_usleep(long int time);
-int			ft_strcmp(const char *str1, const char *str2);
 long int	get_time(void);
-char		*ft_itoa(int n);
-char		*ft_strjoin(char *s1, char const *s2);
 
 #endif

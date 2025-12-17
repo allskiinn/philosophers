@@ -6,7 +6,7 @@
 /*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 17:48:55 by aliberal          #+#    #+#             */
-/*   Updated: 2025/12/16 20:22:35 by aliberal         ###   ########.fr       */
+/*   Updated: 2025/12/17 01:06:20 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ int	ft_atoi(const char *str)
 
 long int	get_time(void)
 {
-	struct timeval	tv;
+	struct timeval	t;
 
-	gettimeofday(&tv, NULL);
-	return ((tv.tv_sec * 1000) + (tv.tv_usec / 1000));
+	gettimeofday(&t, NULL);
+	return ((t.tv_sec * 1000) + (t.tv_usec / 1000));
 }
 
 int	ft_usleep(long int time)

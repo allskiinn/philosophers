@@ -6,7 +6,7 @@
 /*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 17:49:55 by aliberal          #+#    #+#             */
-/*   Updated: 2025/12/16 20:23:28 by aliberal         ###   ########.fr       */
+/*   Updated: 2025/12/16 22:11:26 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	start_data(int argc, char **argv, t_data *data)
 {
 	data->philos = ft_atoi(argv[1]);
-	data->time_die = ft_atoi(argv[2]);
-	data->time_eat = ft_atoi(argv[3]);
-	data->time_sleep = ft_atoi(argv[4]);
+	data->time_to_die = ft_atoi(argv[2]);
+	data->time_to_eat = ft_atoi(argv[3]);
+	data->time_to_sleep = ft_atoi(argv[4]);
 	data->meals_philo = -1;
 	data->start = 0;
 	data->start_time = 0;
@@ -29,8 +29,6 @@ void	start_data(int argc, char **argv, t_data *data)
 	}
 	data->finish = 0;
 }
-
-
 
 void	start_lock_and_forks(t_data *d)
 {

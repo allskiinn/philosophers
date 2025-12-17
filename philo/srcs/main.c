@@ -6,7 +6,7 @@
 /*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 17:35:25 by aliberal          #+#    #+#             */
-/*   Updated: 2025/12/16 20:33:22 by aliberal         ###   ########.fr       */
+/*   Updated: 2025/12/17 00:57:34 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static	void	show_header(void)
 	printf("\n--------------------------------------");
 	printf("\n TIME");
 	printf(" IDX");
-	printf(" ROTINA");
+	printf(" ACTION");
 	printf("\n--------------------------------------");
 	printf("\n\n");
 }
